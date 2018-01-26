@@ -1,0 +1,2322 @@
+<?xml version="1.0" encoding="UTF-8"?><Db flnm="BugDb" nm="Bug" ver="1.3.4">
+  <VerLbl/>
+  <VerNotes/>
+  <DefTblOpts/>
+  <DocFolder>/Users/wxl/Desktop/桌面/itmsMpDb_WEB</DocFolder>
+  <Sch Cm="" nm="dev">
+    <Tbl UsSo="1" nm="tb_express">
+      <Cm>邮寄信息表</Cm>
+      <TblOpts/>
+      <Pk ClNs="expId" nm="pktb_express"/>
+      <Cl au="0" df="" nm="expId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usId" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>用户ID</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="expName" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>收件人姓名</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="expTel" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>收件人电话</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="expProvince" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>收件省份</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="expCity" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>收件城市</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="expZipCode" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>收件邮编</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="expAddress" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="500" sc="null" sg="1" un="0"/>
+        <Cm>收件详细地址</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tb_gift">
+      <Cm>礼品信息表</Cm>
+      <TblOpts/>
+      <Pk ClNs="gfId" nm="pktb_gift"/>
+      <Cl au="0" df="" nm="gfId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfClass" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>礼品分类(1喷雾剂 2实物 3虚拟物品)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfName" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>礼品名称</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfLogoPic" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
+        <Cm>logo图片地址</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfInfo" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
+        <Cm>礼品描述</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfStock" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>库存量</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfExchange" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>累计兑换量</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfGold" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>礼品所需金币(得分)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfSoft" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>礼物排序(1-999 正向排序 小到大)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfDate" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>更新时间</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfTem" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>是否启用(0未启用 1启用 2废弃)</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tb_giftExch">
+      <Cm>礼品兑换表</Cm>
+      <TblOpts/>
+      <Pk ClNs="geId" nm="pktb_giftExch"/>
+      <Cl au="0" df="" nm="geId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usId" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>用户ID</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfId" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>礼品ID</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geNum" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>兑换数量</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geName" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>兑换收件人姓名</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geProvince" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>兑换收件省份</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geCity" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>兑换收件城市</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geZipCode" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>兑换收件邮编</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geTel" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>兑换收件人电话</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geAddress" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="500" sc="null" sg="1" un="0"/>
+        <Cm>兑换收件详细地址</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geDate" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>兑换时间</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geDeliveryDate" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>发货时间</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geArrivalDate" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>到货时间</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geExpNO" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>快递单号</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tb_ranking">
+      <Cm>用户排名信息</Cm>
+      <TblOpts/>
+      <Pk ClNs="Id" nm="pktb_ranking"/>
+      <Cl au="0" df="" nm="Id" nu="0">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tb_recharge">
+      <Cm>充值记录</Cm>
+      <TblOpts/>
+      <Pk ClNs="reId" nm="pktb_recharge"/>
+      <Cl au="0" df="" nm="reId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键ID</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usId" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>用户ID</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="reMoney" nu="1">
+        <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>充值花费钱</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="reCoin" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>用户充值币(获得喷雾剂数)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="reDate" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>充值时间</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tb_user">
+      <Cm>用户信息表</Cm>
+      <TblOpts/>
+      <Pk ClNs="usId" nm="pktb_user"/>
+      <Cl au="0" df="" nm="usId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usWxId" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>微信用户ID</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usName" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>用户姓名</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usCoin" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>用户充值币(喷雾剂)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usSetVoice" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>声音配置(null开启,1关闭)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usGold" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>用户金币(得分)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usSynDate" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>得分同步时间(YY/MM/DD hh:mm:ss)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usDate" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>最后访问时间(YY/MM/DD hh:mm:ss)</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <CustomTypes/>
+  </Sch>
+  <Sch Cm="正式版" nm="master">
+    <CustomTypes/>
+  </Sch>
+  <Dgm nm="devDiagrams">
+    <RnCf ClkAct="false" FtSz="11" lkStgy="RightAngleStrategy" zm="1.0">
+      <VbCfg>
+        <Fg ky="Auto Number" vl="0"/>
+        <Fg ky="Check" vl="0"/>
+        <Fg ky="Comment" vl="1"/>
+        <Fg ky="Data Type" vl="1"/>
+        <Fg ky="Default" vl="0"/>
+        <Fg ky="ENUM Values" vl="0"/>
+        <Fg ky="Length" vl="1"/>
+        <Fg ky="Name" vl="1"/>
+        <Fg ky="Nullable" vl="0"/>
+        <Fg ky="Schema Name" vl="0"/>
+        <Fg ky="Signed" vl="0"/>
+      </VbCfg>
+    </RnCf>
+    <DiaProps>
+      <Show AllCols="1" FkCols="1" FkNms="1" PkCols="1"/>
+      <ErNotation>BarkerErNotation</ErNotation>
+      <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
+      <svg path="/Users/wxl/Desktop/itmsDb.svg"/>
+    </DiaProps>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_user" x="30" y="42"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_gift" x="30" y="428"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_express" x="29" y="231"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_giftExch" x="519" y="259"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_recharge" x="521" y="41"/>
+    <Notes/>
+    <Zones/>
+  </Dgm>
+  <Dgm nm="masterDiagrams">
+    <RnCf ClkAct="true" FtSz="11" lkStgy="RightAngleStrategy" zm="1.0">
+      <VbCfg>
+        <Fg ky="Auto Number" vl="0"/>
+        <Fg ky="Check" vl="0"/>
+        <Fg ky="Comment" vl="0"/>
+        <Fg ky="Data Type" vl="1"/>
+        <Fg ky="Default" vl="0"/>
+        <Fg ky="ENUM Values" vl="0"/>
+        <Fg ky="Length" vl="1"/>
+        <Fg ky="Name" vl="1"/>
+        <Fg ky="Nullable" vl="0"/>
+        <Fg ky="Schema Name" vl="0"/>
+        <Fg ky="Signed" vl="0"/>
+      </VbCfg>
+    </RnCf>
+    <DiaProps>
+      <Show AllCols="1" FkCols="1" FkNms="1" PkCols="1"/>
+      <ErNotation>BarkerErNotation</ErNotation>
+      <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
+      <svg path=""/>
+    </DiaProps>
+    <Notes/>
+    <Zones/>
+  </Dgm>
+  <RnmMgr NxRnmId="742">
+    <RnmCh ObjCls="Schema" ParCls="Database" ParNme="newDb" SupCls="" SupNme="">
+      <Rnm id="408" nNm="itms" oNm="dev"/>
+      <Rnm id="1" nNm="dev" oNm="schemaA"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="40" nNm="merchantUser" oNm="businessUser"/>
+      <Rnm id="2" nNm="businessUser" oNm="businessUsers"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="5" nNm="devUser" oNm="developer"/>
+      <Rnm id="3" nNm="developer" oNm="developers"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="4" nNm="operatorsUser" oNm="operators"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="7" nNm="serProUser" oNm="serviceProUser"/>
+      <Rnm id="6" nNm="serviceProUser" oNm="serviceProvider"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="8" nNm="devId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="12" nNm="devIntroduce" oNm="introduce"/>
+      <Rnm id="9" nNm="introduce" oNm="headIcoPath"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="10" nNm="devUserName" oNm="userName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="11" nNm="devNickname" oNm="nickname"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="13" nNm="devEmail" oNm="email"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="14" nNm="devPhone" oNm="phone"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="15" nNm="devSocialNum" oNm="socialNum"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="16" nNm="devIndustry" oNm="industry"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="17" nNm="devCompany" oNm="company"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="18" nNm="devPosition" oNm="position"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="19" nNm="devSchool" oNm="school"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="20" nNm="devSpecialty" oNm="specialty"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="21" nNm="devLivingIn" oNm="livingIn"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="22" nNm="devLicenseNum" oNm="licenseNum"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="23" nNm="devLicenseImg" oNm="licenseImg"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="39" nNm="serId" oNm="serNO"/>
+      <Rnm id="26" nNm="serNO" oNm="devServiceId"/>
+      <Rnm id="24" nNm="devServiceId" oNm="serviceId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="serProUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="25" nNm="serId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchantUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="41" nNm="meruId" oNm="busId"/>
+      <Rnm id="27" nNm="busId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="system" SupCls="Schema" SupNme="dev">
+      <Rnm id="28" nNm="sysName" oNm="系统名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="authority" SupCls="Schema" SupNme="dev">
+      <Rnm id="29" nNm="auValid" oNm="auAild"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userSystemMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="34" nNm="ussMark" oNm="ussVaild"/>
+      <Rnm id="31" nNm="ussVaild" oNm="ussUaild"/>
+      <Rnm id="30" nNm="ussUaild" oNm="ussAild"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="role" SupCls="Schema" SupNme="dev">
+      <Rnm id="32" nNm="roId" oNm="roleId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="role" SupCls="Schema" SupNme="dev">
+      <Rnm id="33" nNm="roDescribe" oNm="sysDescribe"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="role" SupCls="Schema" SupNme="dev">
+      <Rnm id="35" nNm="roStint" oNm="stint"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="36" nNm="userRoleMid" oNm="userRole"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="devUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="37" nNm="devMark" oNm="devAlid"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="serProUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="38" nNm="serMark" oNm="serAlid"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="44" nNm="posOnlineLog" oNm="posOnlineSta"/>
+      <Rnm id="42" nNm="posOnlineSta" oNm="posActiveSta"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="43" nNm="appAdded" oNm="appMid"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="45" nNm="transLog" oNm="transInfo"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="114" nNm="posAgenciesMid" oNm="posAgencies"/>
+      <Rnm id="46" nNm="posAgencies" oNm="aposAgencies"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="75" nNm="appWithMid" oNm="appWith"/>
+      <Rnm id="74" nNm="appWith" oNm="appAgen"/>
+      <Rnm id="47" nNm="appAgen" oNm="appAdsc"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="operatorsUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="48" nNm="opuId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="dev">
+      <Rnm id="95" nNm="ageId" oNm="oagId"/>
+      <Rnm id="50" nNm="oagId" oNm="ageId"/>
+      <Rnm id="49" nNm="ageId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="operatorsUser" SupCls="Schema" SupNme="dev">
+      <Rnm id="51" nNm="oagId" oNm="aa"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="52" nNm="usinId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="53" nNm="usinNickname" oNm="Nickname"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="54" nNm="usinIntroduce" oNm="Introduce"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="55" nNm="usinHeadIcoPath" oNm="HeadIcoPath"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="56" nNm="usinEmail" oNm="Email"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="57" nNm="usinPhone" oNm="Phone"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="58" nNm="usinSocialNum" oNm="SocialNum"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="59" nNm="usinIndustry" oNm="Industry"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="60" nNm="usinCompany" oNm="Company"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="61" nNm="usinPosition" oNm="Position"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="62" nNm="usinSchool" oNm="School"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="63" nNm="usinSpecialty" oNm="Specialty"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="64" nNm="usinLivingIn" oNm="LivingIn"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="65" nNm="usinLicenseNum" oNm="LicenseNum"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="66" nNm="usinLicenseImg" oNm="LicenseImg"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="83" nNm="usinPerWebsite" oNm="usinPersoWebsite"/>
+      <Rnm id="82" nNm="usinPersoWebsite" oNm="usinCompUrl"/>
+      <Rnm id="67" nNm="usinCompUrl" oNm="CompUrl"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="68" nNm="usinMark" oNm="Mark"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="69" nNm="usinNO" oNm="usinDevNO"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="70" nNm="posLabel" oNm="posGroup"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="71" nNm="posLabelMid" oNm="posGroupMid"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="72" nNm="posMerLable" oNm="posMerGroup"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="73" nNm="posMerLabelMid" oNm="posLabelMerMid"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="76" nNm="informApi" oNm="InformApi"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="80" nNm="comInfor" oNm="corpInfor"/>
+      <Rnm id="77" nNm="corpInfor" oNm="CorpInfor"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="comInfor" SupCls="Schema" SupNme="dev">
+      <Rnm id="81" nNm="comId" oNm="corpId"/>
+      <Rnm id="78" nNm="corpId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="comInfor" SupCls="Schema" SupNme="dev">
+      <Rnm id="79" nNm="comName" oNm="corpName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="94" nNm="agency" oNm="opeAgency"/>
+      <Rnm id="84" nNm="opeAgency" oNm="opeAgencies"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="dev">
+      <Rnm id="99" nNm="ageSeq" oNm="seq"/>
+      <Rnm id="98" nNm="seq" oNm="b"/>
+      <Rnm id="85" nNm="b" oNm="排序位"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="dev">
+      <Rnm id="97" nNm="ageLogoPath" oNm="a"/>
+      <Rnm id="86" nNm="a" oNm="机构logo路径（大中小）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="dev">
+      <Rnm id="96" nNm="ageName" oNm="oagName"/>
+      <Rnm id="93" nNm="oagName" oNm="c"/>
+      <Rnm id="87" nNm="c" oNm="机构名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="dev">
+      <Rnm id="88" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="dev">
+      <Rnm id="100" nNm="ageDate" oNm="oagDate"/>
+      <Rnm id="89" nNm="oagDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appWithMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="238" nNm="userId" oNm="更新用户ID"/>
+      <Rnm id="91" nNm="更新用户ID" oNm="更新用户"/>
+      <Rnm id="90" nNm="更新用户" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appWithMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="239" nNm="apwDate" oNm="更新日期"/>
+      <Rnm id="92" nNm="更新日期" oNm="更新时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="101" nNm="facId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="102" nNm="facNO" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="103" nNm="facName" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="104" nNm="facAddress" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="105" nNm="facBusPhone" oNm="d"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="106" nNm="facCusPhone" oNm="e"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="107" nNm="facFax" oNm="f"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="108" nNm="facZipCode" oNm="g"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="110" nNm="facInteSite" oNm="facSite"/>
+      <Rnm id="109" nNm="facSite" oNm="h"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="111" nNm="facSocially" oNm="i"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="112" nNm="userId" oNm="k"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="113" nNm="facDate" oNm="l"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAgenciesMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="115" nNm="pamId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAgenciesMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="116" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAgenciesMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="117" nNm="pamDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="118" nNm="merNO" oNm="商户号（4位起递增 唯一）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="119" nNm="merId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="120" nNm="merName" oNm="商户全名"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="121" nNm="merShortName" oNm="商户简称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="122" nNm="merAddr" oNm="商户地址"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="123" nNm="merLogoPath" oNm="商户logo图片路径（大 中 小）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="125" nNm="merInteSite" oNm="merInterSite"/>
+      <Rnm id="124" nNm="merInterSite" oNm="网址"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="126" nNm="merContacts" oNm="联系人姓名"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="127" nNm="merPhone" oNm="联系电话"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="128" nNm="merComp" oNm="商户自定义权限（0关闭 1开启）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="129" nNm="merValidate" oNm="门店POS匹配验证（0关闭 1开启）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="130" nNm="merMark" oNm="生效标准(0未启用 1已启用 2禁用)"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="131" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="132" nNm="merDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="modelInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="135" nNm="modNO" oNm="modeNO"/>
+      <Rnm id="133" nNm="modeNO" oNm="型号编号（4位唯一码）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="modelInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="134" nNm="modName" oNm="型号名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="modelInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="136" nNm="modVersion" oNm="系统版本"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="modelInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="137" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="modelInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="138" nNm="modDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="139" nNm="posSN" oNm="终端序列号SN"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="140" nNm="posAddress" oNm="布放地址"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="141" nNm="posOnline" oNm="终端在线状态"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="143" nNm="posTask" oNm="posTesk"/>
+      <Rnm id="142" nNm="posTesk" oNm="终端任务状态"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="144" nNm="posOnlineDate" oNm="最后连接时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="146" nNm="posContactDate" oNm="posNextComing"/>
+      <Rnm id="145" nNm="posNextComing" oNm="预计下次连接时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="147" nNm="posContactInter" oNm="连接间隔"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="148" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="149" nNm="posDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="150" nNm="posMark" oNm="生效标准(0未启用 1已启用 2禁用)"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabel" SupCls="Schema" SupNme="dev">
+      <Rnm id="151" nNm="labId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabel" SupCls="Schema" SupNme="dev">
+      <Rnm id="152" nNm="labName" oNm="分组名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabel" SupCls="Schema" SupNme="dev">
+      <Rnm id="153" nNm="labColor" oNm="分组颜色 16进制"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabel" SupCls="Schema" SupNme="dev">
+      <Rnm id="154" nNm="labType" oNm="分组类型（0上架关联用分组 1终端分组）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabel" SupCls="Schema" SupNme="dev">
+      <Rnm id="155" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabel" SupCls="Schema" SupNme="dev">
+      <Rnm id="156" nNm="labDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="157" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="158" nNm="plmId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="159" nNm="plmDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posType" SupCls="Schema" SupNme="dev">
+      <Rnm id="160" nNm="potNO" oNm="类型编号（4位唯一码）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posType" SupCls="Schema" SupNme="dev">
+      <Rnm id="161" nNm="potName" oNm="类型名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posType" SupCls="Schema" SupNme="dev">
+      <Rnm id="162" nNm="potNote" oNm="备注说明"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posType" SupCls="Schema" SupNme="dev">
+      <Rnm id="163" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posType" SupCls="Schema" SupNme="dev">
+      <Rnm id="164" nNm="potDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posType" SupCls="Schema" SupNme="dev">
+      <Rnm id="165" nNm="potId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="166" nNm="poiId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merUserAgenMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="167" nNm="muaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merAgencies" SupCls="Schema" SupNme="dev">
+      <Rnm id="168" nNm="meaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merAgencies" SupCls="Schema" SupNme="dev">
+      <Rnm id="169" nNm="meaName" oNm="机构名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merAgencies" SupCls="Schema" SupNme="dev">
+      <Rnm id="171" nNm="meaSeq" oNm="mea"/>
+      <Rnm id="170" nNm="mea" oNm="排序位"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merAgencies" SupCls="Schema" SupNme="dev">
+      <Rnm id="172" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merAgencies" SupCls="Schema" SupNme="dev">
+      <Rnm id="173" nNm="meaDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="174" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="175" nNm="pmlDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="176" nNm="pmlId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLable" SupCls="Schema" SupNme="dev">
+      <Rnm id="177" nNm="mlaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLable" SupCls="Schema" SupNme="dev">
+      <Rnm id="178" nNm="mlaName" oNm="分组名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLable" SupCls="Schema" SupNme="dev">
+      <Rnm id="179" nNm="mlaColor" oNm="分组颜色 16进制"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLable" SupCls="Schema" SupNme="dev">
+      <Rnm id="180" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLable" SupCls="Schema" SupNme="dev">
+      <Rnm id="181" nNm="mlaDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posCommLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="182" nNm="pclId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posCommLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="183" nNm="pclDate" oNm="交易日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posCommLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="184" nNm="pclPackets" oNm="报文信息"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="185" nNm="trlId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="186" nNm="trlDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="187" nNm="trlPackets" oNm="本文信息 "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posOnlineLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="188" nNm="ponId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posOnlineLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="189" nNm="ponDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posOnlineLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="190" nNm="ponOnType" oNm="状态（在线/离线）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posTaskLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="191" nNm="potId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posTaskLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="192" nNm="potDate" oNm="上报时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posTaskLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="193" nNm="potStatus" oNm="任务状态"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posTaskLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="195" nNm="potPackets" oNm="pot"/>
+      <Rnm id="194" nNm="pot" oNm="通讯报文"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="196" nNm="tskId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="197" nNm="tskNO" oNm="任务编号"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="198" nNm="tskName" oNm="任务名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="199" nNm="tskType" oNm="任务状态（0未执行 1执行中 2执行结束）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="200" nNm="tskBeginDate" oNm="起始时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="201" nNm="tskEndDate" oNm="实际结束时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="202" nNm="tskNote" oNm="说明"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="203" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="204" nNm="tskDate" oNm="更新时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="dev">
+      <Rnm id="205" nNm="tpdId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="dev">
+      <Rnm id="207" nNm="tpdStatus" oNm="tpdStute"/>
+      <Rnm id="206" nNm="tpdStute" oNm="执行状态"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="dev">
+      <Rnm id="208" nNm="tpdSetDate" oNm="安排执行时间 "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="dev">
+      <Rnm id="211" nNm="tpdRealDate" oNm="tpdrealDate"/>
+      <Rnm id="209" nNm="tpdrealDate" oNm="实际执行时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="dev">
+      <Rnm id="210" nNm="tpdEndDate" oNm="实际结束时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskApp" SupCls="Schema" SupNme="dev">
+      <Rnm id="214" nNm="tkaId" oNm="taaId"/>
+      <Rnm id="212" nNm="taaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskApp" SupCls="Schema" SupNme="dev">
+      <Rnm id="215" nNm="tkaParameter" oNm="tka"/>
+      <Rnm id="213" nNm="tka" oNm="参数值"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskApp" SupCls="Schema" SupNme="dev">
+      <Rnm id="216" nNm="tkaType" oNm="更新类型"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskApp" SupCls="Schema" SupNme="dev">
+      <Rnm id="217" nNm="tkaSqe" oNm="执行排序位"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="218" nNm="tplId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="219" nNm="tplParameter" oNm="参数值"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="220" nNm="tplDate" oNm="上报时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="221" nNm="tplType" oNm="更新类型"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="223" nNm="tplStatus" oNm="tplStute"/>
+      <Rnm id="222" nNm="tplStute" oNm="执行状态 "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="224" nNm="tplFailsMsg" oNm="失败原因"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="225" nNm="tplSqe" oNm="执行排序位"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="226" nNm="apcId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="227" nNm="apcName" oNm="类别名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="228" nNm="apcLogoPath" oNm="图标logo地址"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="229" nNm="apcNote" oNm="描述说明"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="230" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="231" nNm="apcDate" oNm="创建日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskTactics" SupCls="Schema" SupNme="dev">
+      <Rnm id="232" nNm="tatId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskTactics" SupCls="Schema" SupNme="dev">
+      <Rnm id="233" nNm="tatDisNum" oNm="终端离散间隔数 "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskTactics" SupCls="Schema" SupNme="dev">
+      <Rnm id="234" nNm="tatDisDate" oNm="执行离散间隔时间 "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskTactics" SupCls="Schema" SupNme="dev">
+      <Rnm id="235" nNm="tatAttempts" oNm="失败尝试次数 "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appWithMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="236" nNm="apwId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appWithMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="237" nNm="apwStatus" oNm="上架状态（0从未上架 1已上架）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appResources" SupCls="Schema" SupNme="dev">
+      <Rnm id="242" nNm="aprName" oNm="apw"/>
+      <Rnm id="240" nNm="apw" oNm="资源名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appResources" SupCls="Schema" SupNme="dev">
+      <Rnm id="241" nNm="aprId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appResources" SupCls="Schema" SupNme="dev">
+      <Rnm id="243" nNm="aprPath" oNm="资源存储全路径"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appResources" SupCls="Schema" SupNme="dev">
+      <Rnm id="244" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appResources" SupCls="Schema" SupNme="dev">
+      <Rnm id="245" nNm="aprDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="dev">
+      <Rnm id="246" nNm="appId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="dev">
+      <Rnm id="247" nNm="appNO" oNm="应用编号"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="dev">
+      <Rnm id="248" nNm="appName" oNm="应用名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="dev">
+      <Rnm id="249" nNm="appNote" oNm="应用说明"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="dev">
+      <Rnm id="250" nNm="appPopular" oNm="热门应用标示"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="dev">
+      <Rnm id="251" nNm="appSqe" oNm="热门应用排序"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="dev">
+      <Rnm id="252" nNm="appDownTime" oNm="下载次数"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="253" nNm="apvId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="407" nNm="apvLogicVer" oNm="apvlogicVer"/>
+      <Rnm id="255" nNm="apvlogicVer" oNm="apvVersion"/>
+      <Rnm id="254" nNm="apvVersion" oNm="业务版本号"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="256" nNm="apvPackVer" oNm="包版本号"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="257" nNm="apvDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="258" nNm="apvCheck" oNm="提交审核结果（0未通过 1通过）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="259" nNm="apvFileName" oNm="程序文件名"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="260" nNm="apvFilePath" oNm="程序全路径"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="261" nNm="apvNote" oNm="程序说明"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="262" nNm="apvLogoPath" oNm="图标logo路径"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="263" nNm="apvParameter" oNm="应用参数（JSON）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="264" nNm="apvHopeAdd" oNm="预计上架日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="265" nNm="apvCompOsVersion" oNm="兼容系统版本"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="266" nNm="apvDownTimes" oNm="下载次数"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="267" nNm="apvAddRequest" oNm="请求上架（0否 1请求上架）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="268" nNm="aadId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="274" nNm="aadAddNotice" oNm="aadNotice"/>
+      <Rnm id="269" nNm="aadNotice" oNm="通知终端（0不通知1通知）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="276" nNm="aadBinding" oNm="aadUninstall"/>
+      <Rnm id="270" nNm="aadUninstall" oNm="不可卸载（0不可卸载1可卸载）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="271" nNm="aadVisible" oNm="可见性设置（0不可见1可见）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="272" nNm="aadPopular" oNm="热门设置（0不热门1热门）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="273" nNm="aadRemoNotice" oNm="下架通知（0不通知1通知）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="277" nNm="aadUninstall" oNm="aadUninstalll"/>
+      <Rnm id="275" nNm="aadUninstalll" oNm="下架卸载程序（0卸载1不卸载）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="278" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="279" nNm="aadDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCompModelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="280" nNm="acmId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheckLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="281" nNm="aclId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheckLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="282" nNm="aclReviewDate" oNm="审核时间"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheckLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="283" nNm="aclStute" oNm="审核状态（0不通过 1通过）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheckLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="285" nNm="aclFailsMsg" oNm="aclFialsMsg"/>
+      <Rnm id="284" nNm="aclFialsMsg" oNm="不通过原因"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="306" nNm="amkId" oNm="apmId"/>
+      <Rnm id="286" nNm="apmId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="307" nNm="amkName" oNm="apmName"/>
+      <Rnm id="287" nNm="apmName" oNm="市场名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="308" nNm="amkType" oNm="apmType"/>
+      <Rnm id="288" nNm="apmType" oNm="市场性质 "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="309" nNm="amkLogoPath" oNm="apmLogoPath"/>
+      <Rnm id="289" nNm="apmLogoPath" oNm="图标logo路径"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="310" nNm="amkAddNotice" oNm="apmAddNotice"/>
+      <Rnm id="290" nNm="apmAddNotice" oNm="默认上架通知终端（0不通知1通知）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="311" nNm="amkBinding" oNm="apmBinding"/>
+      <Rnm id="291" nNm="apmBinding" oNm="默认不可卸载（0不可卸载1可卸载）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="312" nNm="amkVisible" oNm="apmVisible"/>
+      <Rnm id="292" nNm="apmVisible" oNm="默认可见性设置（0不可见1可见）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="313" nNm="amkPopular" oNm="apmPopular"/>
+      <Rnm id="293" nNm="apmPopular" oNm="默认热门设置（0不热门1热门）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="314" nNm="amkRemoNotice" oNm="apmRemoNotice"/>
+      <Rnm id="294" nNm="apmRemoNotice" oNm="默认下架通知（0不通知1通知）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="315" nNm="amkUninstall" oNm="apmUninstall"/>
+      <Rnm id="295" nNm="apmUninstall" oNm="默认下架卸载程序（0卸载1不卸载）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="296" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="316" nNm="amkDate" oNm="apmDate"/>
+      <Rnm id="297" nNm="apmDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appUserLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="300" nNm="aulId" oNm="apuId"/>
+      <Rnm id="298" nNm="apuId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appUserLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="301" nNm="aulDate" oNm="apuDate"/>
+      <Rnm id="299" nNm="apuDate" oNm="使用日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="302" nNm="apmId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="303" nNm="apmMark" oNm="启用标志（0不启用 1启用）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="304" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="305" nNm="apmDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosExclude" SupCls="Schema" SupNme="dev">
+      <Rnm id="317" nNm="apeId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appDownLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="318" nNm="adlId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appDownLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="320" nNm="adlDownDate" oNm="adlDate"/>
+      <Rnm id="319" nNm="adlDate" oNm="下载日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="321" nNm="incId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="322" nNm="incName" oNm="类别名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="323" nNm="incLogoPath" oNm="图标logo路径"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="324" nNm="incSqe" oNm="类别排序"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="325" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informClass" SupCls="Schema" SupNme="dev">
+      <Rnm id="326" nNm="incDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApi" SupCls="Schema" SupNme="dev">
+      <Rnm id="327" nNm="inaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApi" SupCls="Schema" SupNme="dev">
+      <Rnm id="328" nNm="inaName" oNm="资料名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApi" SupCls="Schema" SupNme="dev">
+      <Rnm id="329" nNm="inaBody" oNm="资料Markdown文件路径"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApi" SupCls="Schema" SupNme="dev">
+      <Rnm id="332" nNm="inaVisible" oNm="inaVisiter"/>
+      <Rnm id="331" nNm="inaVisiter" oNm="inaHidder"/>
+      <Rnm id="330" nNm="inaHidder" oNm="资料可见性（0不可见 1可见"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApi" SupCls="Schema" SupNme="dev">
+      <Rnm id="333" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApi" SupCls="Schema" SupNme="dev">
+      <Rnm id="334" nNm="inaDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApiFile" SupCls="Schema" SupNme="dev">
+      <Rnm id="335" nNm="infId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApiFile" SupCls="Schema" SupNme="dev">
+      <Rnm id="336" nNm="infFileName" oNm="资源文件名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApiFile" SupCls="Schema" SupNme="dev">
+      <Rnm id="337" nNm="infFilePath" oNm="资源文件路径"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApiFile" SupCls="Schema" SupNme="dev">
+      <Rnm id="338" nNm="infType" oNm="资源文件类型"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApiFile" SupCls="Schema" SupNme="dev">
+      <Rnm id="339" nNm="userId" oNm="更新用户"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApiFile" SupCls="Schema" SupNme="dev">
+      <Rnm id="340" nNm="infDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="basicConfi" SupCls="Schema" SupNme="dev">
+      <Rnm id="341" nNm="bacId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="basicConfi" SupCls="Schema" SupNme="dev">
+      <Rnm id="342" nNm="bacNO" oNm="配置编号"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="basicConfi" SupCls="Schema" SupNme="dev">
+      <Rnm id="343" nNm="bacTitle" oNm="配置标题"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="basicConfi" SupCls="Schema" SupNme="dev">
+      <Rnm id="344" nNm="bacNote" oNm="配置说明"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="basicConfi" SupCls="Schema" SupNme="dev">
+      <Rnm id="345" nNm="bacDefVar" oNm="默认值（JSON）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="basicConfi" SupCls="Schema" SupNme="dev">
+      <Rnm id="346" nNm="bacSetVar" oNm="设置值（JSON）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="basicConfi" SupCls="Schema" SupNme="dev">
+      <Rnm id="347" nNm="userId" oNm="更新用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="basicConfi" SupCls="Schema" SupNme="dev">
+      <Rnm id="348" nNm="bacDate" oNm="更新日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="dev">
+      <Rnm id="349" nNm="ageId" oNm="j"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAgenciesMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="350" nNm="ageId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="351" nNm="posId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAgenciesMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="352" nNm="posId" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAgenciesMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="353" nNm="meaId" oNm="e"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchants" SupCls="Schema" SupNme="dev">
+      <Rnm id="354" nNm="ageId" oNm="所属机构ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="355" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="356" nNm="labId" oNm="分组ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="357" nNm="facId" oNm="厂商ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="modelInfo" SupCls="Schema" SupNme="dev">
+      <Rnm id="358" nNm="modId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="359" nNm="modId" oNm="型号ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="360" nNm="potId" oNm="类型ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="dev">
+      <Rnm id="361" nNm="ageId" oNm="所属机构ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabel" SupCls="Schema" SupNme="dev">
+      <Rnm id="362" nNm="ageId" oNm="所属机构ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merUserAgenMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="363" nNm="meaId" oNm="商户机构ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merUserAgenMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="364" nNm="userId" oNm="用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="365" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLabelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="366" nNm="mlaId" oNm="商户终端分组ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posMerLable" SupCls="Schema" SupNme="dev">
+      <Rnm id="367" nNm="meaId" oNm="所属商户机构ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="368" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posCommLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="369" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posOnlineLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="370" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posTaskLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="371" nNm="tpdId" oNm="任务终端分配ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="dev">
+      <Rnm id="372" nNm="ageId" oNm="所属机构ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appWithMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="373" nNm="ageId" oNm="机构ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="dev">
+      <Rnm id="374" nNm="ageId" oNm="所属机构ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="dev">
+      <Rnm id="375" nNm="tskId" oNm="任务ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="dev">
+      <Rnm id="376" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskApp" SupCls="Schema" SupNme="dev">
+      <Rnm id="377" nNm="tskId" oNm="任务ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskApp" SupCls="Schema" SupNme="dev">
+      <Rnm id="378" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskApp" SupCls="Schema" SupNme="dev">
+      <Rnm id="379" nNm="apvId" oNm="版本ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="380" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="381" nNm="apvId" oNm="版本ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="dev">
+      <Rnm id="382" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appWithMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="383" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="dev">
+      <Rnm id="384" nNm="apcId" oNm="应用分类ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appResources" SupCls="Schema" SupNme="dev">
+      <Rnm id="385" nNm="apvId" oNm="应用版本ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="386" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="dev">
+      <Rnm id="387" nNm="userId" oNm="服务提供商用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="388" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appAdded" SupCls="Schema" SupNme="dev">
+      <Rnm id="389" nNm="amkId" oNm="应用市场ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCompModelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="390" nNm="apvId" oNm="应用版本ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCompModelMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="391" nNm="potId" oNm="终端型号ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheckLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="392" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheckLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="393" nNm="apvId" oNm="应用版本ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheckLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="394" nNm="userId" oNm="审核用户ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appUserLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="395" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appUserLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="396" nNm="apvId" oNm="应用版本ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appUserLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="397" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosExclude" SupCls="Schema" SupNme="dev">
+      <Rnm id="398" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosExclude" SupCls="Schema" SupNme="dev">
+      <Rnm id="399" nNm="labId" oNm="终端分组ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="400" nNm="amkId" oNm="应用市场ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPosMid" SupCls="Schema" SupNme="dev">
+      <Rnm id="401" nNm="labId" oNm="终端分组ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appDownLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="402" nNm="appId" oNm="应用ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appDownLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="403" nNm="apvId" oNm="应用版本ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appDownLog" SupCls="Schema" SupNme="dev">
+      <Rnm id="404" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApi" SupCls="Schema" SupNme="dev">
+      <Rnm id="405" nNm="incId" oNm="类别ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="informApiFile" SupCls="Schema" SupNme="dev">
+      <Rnm id="406" nNm="inaId" oNm="开发资料ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="role" SupCls="Schema" SupNme="itms">
+      <Rnm id="409" nNm="roType" oNm="roIsolation"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userAgenMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="410" nNm="uamId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="411" nNm="userAccount" oNm="user"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userAccount" SupCls="Schema" SupNme="itms">
+      <Rnm id="412" nNm="userAccount" oNm="account"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userAccount" SupCls="Schema" SupNme="itms">
+      <Rnm id="413" nNm="userPassword" oNm="password"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="factory" SupCls="Schema" SupNme="itms">
+      <Rnm id="414" nNm="fid" oNm="FID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="modelInfo" SupCls="Schema" SupNme="itms">
+      <Rnm id="415" nNm="mid" oNm="MID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="416" nNm="userCheck" oNm="userCheckLog"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="417" nNm="uckId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="418" nNm="informClass" oNm="inforClass"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="itms">
+      <Rnm id="419" nNm="ageOper" oNm="apeOper"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="421" nNm="posAppInstall" oNm="appApkPosMid"/>
+      <Rnm id="420" nNm="appApkPosMid" oNm="appApkPos"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAppInstall" SupCls="Schema" SupNme="itms">
+      <Rnm id="422" nNm="paiId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAppInstall" SupCls="Schema" SupNme="itms">
+      <Rnm id="423" nNm="apvId" oNm="应用版本ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAppInstall" SupCls="Schema" SupNme="itms">
+      <Rnm id="424" nNm="apvPackName" oNm="应用包名"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAppInstall" SupCls="Schema" SupNme="itms">
+      <Rnm id="425" nNm="appName" oNm="应用名称"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAppInstall" SupCls="Schema" SupNme="itms">
+      <Rnm id="426" nNm="apvPackVer" oNm="应用版本号"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAppInstall" SupCls="Schema" SupNme="itms">
+      <Rnm id="427" nNm="paiDate" oNm="安装日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posAppInstall" SupCls="Schema" SupNme="itms">
+      <Rnm id="428" nNm="posId" oNm="终端ID"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posLabel" SupCls="Schema" SupNme="itms">
+      <Rnm id="429" nNm="labType" oNm="labTpye"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPosTotal" SupCls="Schema" SupNme="itms">
+      <Rnm id="438" nNm="sptDate" oNm="b"/>
+      <Rnm id="430" nNm="b" oNm="日期"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPosAdd" SupCls="Schema" SupNme="itms">
+      <Rnm id="431" nNm="spaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPosAdd" SupCls="Schema" SupNme="itms">
+      <Rnm id="432" nNm="ageId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPosAdd" SupCls="Schema" SupNme="itms">
+      <Rnm id="433" nNm="spaDate" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPosAdd" SupCls="Schema" SupNme="itms">
+      <Rnm id="435" nNm="spaAddNum" oNm="spaAdd"/>
+      <Rnm id="434" nNm="spaAdd" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPosTotal" SupCls="Schema" SupNme="itms">
+      <Rnm id="436" nNm="sptId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPosTotal" SupCls="Schema" SupNme="itms">
+      <Rnm id="437" nNm="ageId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPosTotal" SupCls="Schema" SupNme="itms">
+      <Rnm id="440" nNm="sptTotalNum" oNm="sptNum"/>
+      <Rnm id="439" nNm="sptNum" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appUserLog" SupCls="Schema" SupNme="itms">
+      <Rnm id="441" nNm="aulUseTimes" oNm="aulUerTimes"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="443" nNm="aptId" oNm="apt"/>
+      <Rnm id="442" nNm="apt" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="444" nNm="appId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="445" nNm="apvId" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="446" nNm="aptTempName" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="447" nNm="aptInfo" oNm="d"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="448" nNm="aptParameter" oNm="e"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="449" nNm="aptDate" oNm="f"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="450" nNm="userId" oNm="g"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="451" nNm="tkpId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="task" SupCls="Schema" SupNme="itms">
+      <Rnm id="452" nNm="tatId" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="453" nNm="tplMark" oNm="k"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="456" nNm="tplQueueNum" oNm="tplQueue"/>
+      <Rnm id="454" nNm="tplQueue" oNm="j"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="455" nNm="tplFailNum" oNm="i"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="457" nNm="tplSussNum" oNm="h"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="458" nNm="tplState" oNm="g"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="459" nNm="tkaId" oNm="e"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="460" nNm="tkpId" oNm="f"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="461" nNm="tskId" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="462" nNm="tplType" oNm="d"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="463" nNm="tplNO" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosList" SupCls="Schema" SupNme="itms">
+      <Rnm id="478" nNm="tplFid" oNm="tplFNO"/>
+      <Rnm id="464" nNm="tplFNO" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="466" nNm="tpdMark" oNm="kk"/>
+      <Rnm id="465" nNm="kk" oNm="k"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="468" nNm="tpdUpdateTimes" oNm="tpdTimestamp"/>
+      <Rnm id="467" nNm="tpdTimestamp" oNm="j"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="469" nNm="tpdFailsInfo" oNm="i"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="470" nNm="tpdTypeDate" oNm="h"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="471" nNm="tpdType" oNm="g"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="472" nNm="tpdRealEndDate" oNm="f"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="473" nNm="tpdRealBeginDate" oNm="e"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="474" nNm="posId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="475" nNm="tplId" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="476" nNm="tpdPlanBeginDate" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDist" SupCls="Schema" SupNme="itms">
+      <Rnm id="477" nNm="tpdPlanEndDate" oNm="d"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="system" SupCls="Schema" SupNme="itms">
+      <Rnm id="523" nNm="sysId" oNm="sysId(01 itas系统 02商户系统 03开发者平台)"/>
+      <Rnm id="479" nNm="sysId(01 itas系统 02商户系统 03开发者平台)" oNm="sysId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="system" SupCls="Schema" SupNme="itms">
+      <Rnm id="522" nNm="sysNO " oNm="sysNO (01 itas系统 02商户系统 03开发者平台)"/>
+      <Rnm id="480" nNm="sysNO (01 itas系统 02商户系统 03开发者平台)" oNm="sysNO"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="483" nNm="ackId" oNm="ack"/>
+      <Rnm id="482" nNm="ack" oNm="apc"/>
+      <Rnm id="481" nNm="apc" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="484" nNm="appId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="485" nNm="apvId" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="486" nNm="ackType" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="487" nNm="ackBody" oNm="d"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="488" nNm="ackInfo" oNm="e"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="489" nNm="userId" oNm="f"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="490" nNm="ackDate" oNm="h"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="491" nNm="ackResult" oNm="i"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="492" nNm="ackFailInfo" oNm="j"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="493" nNm="ackCheckUser" oNm="k"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="494" nNm="ackMark" oNm="l"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appResources" SupCls="Schema" SupNme="itms">
+      <Rnm id="495" nNm="aprType" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appResources" SupCls="Schema" SupNme="itms">
+      <Rnm id="496" nNm="aprMark" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="itms">
+      <Rnm id="497" nNm="apvCommitDate" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="499" nNm="sapId" oNm="sap"/>
+      <Rnm id="498" nNm="sap" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="500" nNm="ageId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="501" nNm="appId" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="502" nNm="apvId" oNm="x"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPos" SupCls="Schema" SupNme="itms">
+      <Rnm id="503" nNm="spsId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPos" SupCls="Schema" SupNme="itms">
+      <Rnm id="504" nNm="ageId" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appParameter" SupCls="Schema" SupNme="itms">
+      <Rnm id="505" nNm="ageId" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appCompModelMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="506" nNm="modId" oNm="potId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTrans" SupCls="Schema" SupNme="itms">
+      <Rnm id="507" nNm="sttId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTrans" SupCls="Schema" SupNme="itms">
+      <Rnm id="508" nNm="sttType" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTrans" SupCls="Schema" SupNme="itms">
+      <Rnm id="509" nNm="meaId" oNm="v"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTrans" SupCls="Schema" SupNme="itms">
+      <Rnm id="510" nNm="sttDate" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTrans" SupCls="Schema" SupNme="itms">
+      <Rnm id="512" nNm="sttValue" oNm="sttData"/>
+      <Rnm id="511" nNm="sttData" oNm="d"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="513" nNm="uckCheckUser" oNm="g"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="514" nNm="uckFailInfo" oNm="f"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="515" nNm="uckResult" oNm="e"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="516" nNm="uckDate" oNm="d"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="517" nNm="userId" oNm="c"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="518" nNm="uckInfo" oNm="b"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="519" nNm="uckBody" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLog" SupCls="Schema" SupNme="itms">
+      <Rnm id="520" nNm="usinNO" oNm="userId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="itms">
+      <Rnm id="521" nNm="amkShopApp" oNm="amk"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userLog" SupCls="Schema" SupNme="itms">
+      <Rnm id="524" nNm="uslModule" oNm="usluserId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="itms">
+      <Rnm id="525" nNm="ageFaName" oNm="ageFname"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="comInfor" SupCls="Schema" SupNme="itms">
+      <Rnm id="526" nNm="comLinkPerson" oNm="comFaxAddress"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="sysNotice" SupCls="Schema" SupNme="itms">
+      <Rnm id="527" nNm="ssnId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="sysNotice" SupCls="Schema" SupNme="itms">
+      <Rnm id="528" nNm="sysId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="sysNotice" SupCls="Schema" SupNme="itms">
+      <Rnm id="529" nNm="ssnNotTitle" oNm="ssnNotice"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="sysNotice" SupCls="Schema" SupNme="itms">
+      <Rnm id="530" nNm="ssnMark" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobNotice" SupCls="Schema" SupNme="itms">
+      <Rnm id="531" nNm="jbnId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobSysInfo" SupCls="Schema" SupNme="itms">
+      <Rnm id="532" nNm="jobId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobSysInfo" SupCls="Schema" SupNme="itms">
+      <Rnm id="533" nNm="jobTriggerName" oNm="triggerName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="534" nNm="jobSysInfo" oNm="sysJobInfo"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobSysInfo" SupCls="Schema" SupNme="itms">
+      <Rnm id="536" nNm="jobTriGroupName" oNm="jobtriGroupName"/>
+      <Rnm id="535" nNm="jobtriGroupName" oNm="triggerGroupName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobSysInfo" SupCls="Schema" SupNme="itms">
+      <Rnm id="537" nNm="jobCron" oNm="cronExpression"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="itms">
+      <Rnm id="538" nNm="appProCgUserId" oNm="appProUserId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPact" SupCls="Schema" SupNme="itms">
+      <Rnm id="539" nNm="feaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyRole" SupCls="Schema" SupNme="itms">
+      <Rnm id="549" nNm="akrId" oNm="keyId"/>
+      <Rnm id="540" nNm="keyId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="559" nNm="akeId" oNm="kemId"/>
+      <Rnm id="541" nNm="kemId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shoppingCart" SupCls="Schema" SupNme="itms">
+      <Rnm id="542" nNm="spcId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shoppingList" SupCls="Schema" SupNme="itms">
+      <Rnm id="543" nNm="sptId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merShopping" SupCls="Schema" SupNme="itms">
+      <Rnm id="544" nNm="mspId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posPayApps" SupCls="Schema" SupNme="itms">
+      <Rnm id="547" nNm="ppaId" oNm="ppa"/>
+      <Rnm id="545" nNm="ppa" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posPayApps" SupCls="Schema" SupNme="itms">
+      <Rnm id="546" nNm="mspId" oNm="a"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="548" nNm="appKeyRole" oNm="appKey"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyRole" SupCls="Schema" SupNme="itms">
+      <Rnm id="550" nNm="akrName" oNm="keyName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyRole" SupCls="Schema" SupNme="itms">
+      <Rnm id="551" nNm="akrInfo" oNm="keyInfo"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyRole" SupCls="Schema" SupNme="itms">
+      <Rnm id="552" nNm="akrUrl" oNm="keyUrl"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyRole" SupCls="Schema" SupNme="itms">
+      <Rnm id="553" nNm="akrDef" oNm="keyDef"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyRole" SupCls="Schema" SupNme="itms">
+      <Rnm id="554" nNm="akrDate" oNm="keyDate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyRole" SupCls="Schema" SupNme="itms">
+      <Rnm id="555" nNm="akrMark" oNm="keyMark"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="556" nNm="appKey" oNm="appKey1"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKey" SupCls="Schema" SupNme="itms">
+      <Rnm id="557" nNm="akeId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="558" nNm="akrId" oNm="keyId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLog" SupCls="Schema" SupNme="itms">
+      <Rnm id="560" nNm="posSN" oNm="posSn"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appOrder" SupCls="Schema" SupNme="itms">
+      <Rnm id="561" nNm="ordId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appOrderDetail" SupCls="Schema" SupNme="itms">
+      <Rnm id="562" nNm="aodId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="mpBmsOrgMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="563" nNm="bomId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="564" nNm="oneClearingTemp" oNm="oneClearing"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="oneClearingTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="565" nNm="octId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFee" SupCls="Schema" SupNme="itms">
+      <Rnm id="566" nNm="shfId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFeeTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="567" nNm="sftId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="sysNotice" SupCls="Schema" SupNme="itms">
+      <Rnm id="568" nNm="ssnDate" oNm="userId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="sysNoticeMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="569" nNm="snmId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posPayApps" SupCls="Schema" SupNme="itms">
+      <Rnm id="570" nNm="appId" oNm="appI"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="571" nNm="appTestAge" oNm="appT"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appTestAge" SupCls="Schema" SupNme="itms">
+      <Rnm id="572" nNm="atgId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="573" nNm="akcId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKeyCheck" SupCls="Schema" SupNme="itms">
+      <Rnm id="574" nNm="akcType" oNm="d "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merShopMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="575" nNm="mspId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="sysNotice" SupCls="Schema" SupNme="itms">
+      <Rnm id="576" nNm="ssnTemUpdate" oNm="TemUpdate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statUser" SupCls="Schema" SupNme="itms">
+      <Rnm id="577" nNm="surId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statUser" SupCls="Schema" SupNme="itms">
+      <Rnm id="578" nNm="surDate" oNm="surdate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppProfit" SupCls="Schema" SupNme="itms">
+      <Rnm id="579" nNm="sptId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppVersion" SupCls="Schema" SupNme="itms">
+      <Rnm id="580" nNm="sanId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statMerchants" SupCls="Schema" SupNme="itms">
+      <Rnm id="581" nNm="smsId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="comInfor" SupCls="Schema" SupNme="itms">
+      <Rnm id="582" nNm="comYSIf" oNm="comYSAgeIf"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFee" SupCls="Schema" SupNme="itms">
+      <Rnm id="594" nNm="comAccountCode" oNm="sftAccountCode"/>
+      <Rnm id="589" nNm="sftAccountCode" oNm="comAccountCode"/>
+      <Rnm id="583" nNm="comAccountCode" oNm="shfSpCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFeeTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="593" nNm="comAccountCode" oNm="sftAccountCode"/>
+      <Rnm id="585" nNm="sftAccountCode" oNm="comAccountCode"/>
+      <Rnm id="584" nNm="comAccountCode" oNm="sftSpCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFee" SupCls="Schema" SupNme="itms">
+      <Rnm id="643" nNm="mboOrganCode" oNm="sftOrganCode"/>
+      <Rnm id="586" nNm="sftOrganCode" oNm="shfOrgaCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFee" SupCls="Schema" SupNme="itms">
+      <Rnm id="644" nNm="mboAcquiCode" oNm="sftAcquiCode"/>
+      <Rnm id="587" nNm="sftAcquiCode" oNm="shfAcquCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFee" SupCls="Schema" SupNme="itms">
+      <Rnm id="645" nNm="mboOrgaName" oNm="sftOrgaName"/>
+      <Rnm id="588" nNm="sftOrgaName" oNm="shfOrgaName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="mpBmsOrgMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="637" nNm="mboOrganCode" oNm="sftOrganCode"/>
+      <Rnm id="590" nNm="sftOrganCode" oNm="bomOrgaCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="mpBmsOrgMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="638" nNm="mboAcquiCode" oNm="sftAcquiCode"/>
+      <Rnm id="591" nNm="sftAcquiCode" oNm="bomAcqCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="mpBmsOrgMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="639" nNm="mboOrgaName" oNm="sftOrgaName"/>
+      <Rnm id="592" nNm="sftOrgaName" oNm="bomOrgaName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shopPosMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="595" nNm="sptId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppVersion" SupCls="Schema" SupNme="itms">
+      <Rnm id="647" nNm="comId" oNm="sanSerUser"/>
+      <Rnm id="596" nNm="sanSerUser" oNm="sapSerUser"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDistHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="597" nNm="tpdhId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDistHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="598" nNm="tpdhRealBeginDate" oNm="tpdRealBeginDate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="taskPosDistHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="599" nNm="tpdhRealEndDate" oNm="tpdRealEndDate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posOnlineLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="600" nNm="ponhId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posOnlineLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="601" nNm="ponhOnType" oNm="ponOnType"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posOnlineLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="602" nNm="ponhDate" oNm="ponDate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="606" nNm="trlhId" oNm="ttlhId"/>
+      <Rnm id="605" nNm="ttlhId" oNm="tlmId"/>
+      <Rnm id="603" nNm="tlmId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="604" nNm="transLogHis" oNm="transLogMonth"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="607" nNm="posId" oNm="meaId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="608" nNm="trlhBatchNo" oNm="trlBatchNo"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="transLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="609" nNm="trlhVoucherNo" oNm="trlVoucherNo"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appUserLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="611" nNm="aulhId" oNm="auhId"/>
+      <Rnm id="610" nNm="auhId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appDownLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="612" nNm="adlhId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appDownLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="613" nNm="adlhMark" oNm="adlMark"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appDownLogHis" SupCls="Schema" SupNme="itms">
+      <Rnm id="614" nNm="adlhDownDate" oNm="adlDownDate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="615" nNm="appPact" oNm="feeAgree"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPact" SupCls="Schema" SupNme="itms">
+      <Rnm id="617" nNm="actId" oNm="apaId"/>
+      <Rnm id="616" nNm="apaId" oNm="apcId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appKey" SupCls="Schema" SupNme="itms">
+      <Rnm id="618" nNm="apvPackName" oNm="apvPackVer"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statPos" SupCls="Schema" SupNme="itms">
+      <Rnm id="620" nNm="spsValue" oNm="spaValue1"/>
+      <Rnm id="619" nNm="spaValue1" oNm="spaValue"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userSystemMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="621" nNm="ussUpdateDate" oNm="ussUpdate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appMarket" SupCls="Schema" SupNme="itms">
+      <Rnm id="622" nNm="amkRotaSoft" oNm="amkRotationSoft"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appRotation" SupCls="Schema" SupNme="itms">
+      <Rnm id="623" nNm="aroId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTransUser" SupCls="Schema" SupNme="itms">
+      <Rnm id="624" nNm="stuId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTransUser" SupCls="Schema" SupNme="itms">
+      <Rnm id="625" nNm="stuType" oNm="统计类型"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTransUser" SupCls="Schema" SupNme="itms">
+      <Rnm id="626" nNm="stuDate" oNm="日期(精确到月)"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTransUser" SupCls="Schema" SupNme="itms">
+      <Rnm id="629" nNm="stuValue" oNm="sttValue"/>
+      <Rnm id="627" nNm="sttValue" oNm="统计值（值根据统计不同而含义不同）"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTransUser" SupCls="Schema" SupNme="itms">
+      <Rnm id="628" nNm="stuDayValue" oNm="aa"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appInnerOrder" SupCls="Schema" SupNme="itms">
+      <Rnm id="630" nNm="aioId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppUse" SupCls="Schema" SupNme="itms">
+      <Rnm id="631" nNm="saeId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posChange" SupCls="Schema" SupNme="itms">
+      <Rnm id="632" nNm="pcId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appWithMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="634" nNm="apwTemUpdate" oNm="spwTemUpdate"/>
+      <Rnm id="633" nNm="spwTemUpdate" oNm="snmTemUpdate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="635" nNm="shoppingCart" oNm="shoppingCat"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appTestAge" SupCls="Schema" SupNme="itms">
+      <Rnm id="636" nNm="appId" oNm="appid"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFeeTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="640" nNm="mboOrganCode" oNm="sftOrganCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFeeTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="641" nNm="mboAcquiCode" oNm="sftAcquiCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="shareFeeTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="642" nNm="mboOrgaName" oNm="sftOrgaName"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="646" nNm="comId" oNm="sapSerUser"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppProfit" SupCls="Schema" SupNme="itms">
+      <Rnm id="648" nNm="comId" oNm="userId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posSelectTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="649" nNm="pstId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posSelectTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="650" nNm="userId" oNm="usrId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersionPact" SupCls="Schema" SupNme="itms">
+      <Rnm id="651" nNm="avpId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appProfit" SupCls="Schema" SupNme="itms">
+      <Rnm id="652" nNm="apfId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="reviewPro" SupCls="Schema" SupNme="itms">
+      <Rnm id="653" nNm="rpId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="reviewPer" SupCls="Schema" SupNme="itms">
+      <Rnm id="654" nNm="ripId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="perAuthMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="655" nNm="ripId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="reviewAuth" SupCls="Schema" SupNme="itms">
+      <Rnm id="656" nNm="raId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="reviewAuditMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="657" nNm="auiId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="auditInfo" SupCls="Schema" SupNme="itms">
+      <Rnm id="658" nNm="auiId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="reviewPerTemp" SupCls="Schema" SupNme="itms">
+      <Rnm id="659" nNm="rptId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="auditInfo" SupCls="Schema" SupNme="itms">
+      <Rnm id="660" nNm="auiCommitUserId" oNm="userId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="auditInfo" SupCls="Schema" SupNme="itms">
+      <Rnm id="661" nNm="auiCheckUser" oNm="auiCheckUse"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="uisSyncFlow" SupCls="Schema" SupNme="itms">
+      <Rnm id="663" nNm="usfId" oNm="usfid"/>
+      <Rnm id="662" nNm="usfid" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="uisSyncFlow" SupCls="Schema" SupNme="itms">
+      <Rnm id="664" nNm="usfUserType" oNm="userType"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="uisSyncFlow" SupCls="Schema" SupNme="itms">
+      <Rnm id="665" nNm="usfRequestTime" oNm="requestTime"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="uisSyncFlow" SupCls="Schema" SupNme="itms">
+      <Rnm id="666" nNm="usfState" oNm="state"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="uisSyncFlow" SupCls="Schema" SupNme="itms">
+      <Rnm id="667" nNm="usfResultCode" oNm="resultCode"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="uisSyncFlow" SupCls="Schema" SupNme="itms">
+      <Rnm id="669" nNm="usfResultDesc" oNm="usfResultDesc "/>
+      <Rnm id="668" nNm="usfResultDesc " oNm="resultDesc "/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appProgram" SupCls="Schema" SupNme="itms">
+      <Rnm id="670" nNm="aprId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appProAdded" SupCls="Schema" SupNme="itms">
+      <Rnm id="671" nNm="aprId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appProMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="672" nNm="aprId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appPipe" SupCls="Schema" SupNme="itms">
+      <Rnm id="673" nNm="pipId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appProgram" SupCls="Schema" SupNme="itms">
+      <Rnm id="674" nNm="aprPayMode" oNm="aprPrice"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appProgPosMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="675" nNm="aprId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="samePackApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="676" nNm="spaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pipeOrder" SupCls="Schema" SupNme="itms">
+      <Rnm id="677" nNm="podId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pipeSys" SupCls="Schema" SupNme="itms">
+      <Rnm id="678" nNm="ppsId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pipePosOrder" SupCls="Schema" SupNme="itms">
+      <Rnm id="679" nNm="ppoId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posProgTmp" SupCls="Schema" SupNme="itms">
+      <Rnm id="680" nNm="pptId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posProgTmp" SupCls="Schema" SupNme="itms">
+      <Rnm id="681" nNm="podId" oNm="ppsId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posProgTmp" SupCls="Schema" SupNme="itms">
+      <Rnm id="682" nNm="pptTemUpdate" oNm="pptMark"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="app" SupCls="Schema" SupNme="itms">
+      <Rnm id="700" nNm="appPipe" oNm="pipId"/>
+      <Rnm id="683" nNm="pipId" oNm="appPipe"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appFileDiff" SupCls="Schema" SupNme="itms">
+      <Rnm id="684" nNm="afdId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statMerchantAss" SupCls="Schema" SupNme="itms">
+      <Rnm id="685" nNm="staId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAgencyAss" SupCls="Schema" SupNme="itms">
+      <Rnm id="687" nNm="saaId" oNm="saa"/>
+      <Rnm id="686" nNm="saa" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posChange" SupCls="Schema" SupNme="itms">
+      <Rnm id="688" nNm="oldPotid" oNm="oldpotid"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posChange" SupCls="Schema" SupNme="itms">
+      <Rnm id="689" nNm="pcDate" oNm="pcdate"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="backMonitor" SupCls="Schema" SupNme="itms">
+      <Rnm id="690" nNm="bmId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobSysInfoLog" SupCls="Schema" SupNme="itms">
+      <Rnm id="691" nNm="jbgId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="itms">
+      <Rnm id="692" nNm="posMainAppNO" oNm="merMainAppNO"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="pos" SupCls="Schema" SupNme="itms">
+      <Rnm id="693" nNm="posMainAppSN" oNm="merMainAppSN"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobSysInfoLog" SupCls="Schema" SupNme="itms">
+      <Rnm id="694" nNm="jbgBeginRun" oNm="JbgBeginRun"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobSysInfoLog" SupCls="Schema" SupNme="itms">
+      <Rnm id="695" nNm="jbgEndRun" oNm="JbgEndRun"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="jobSysInfoLog" SupCls="Schema" SupNme="itms">
+      <Rnm id="696" nNm="jbgRunTime" oNm="JbgRunTime"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppDownload" SupCls="Schema" SupNme="itms">
+      <Rnm id="697" nNm="sadId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppNum" SupCls="Schema" SupNme="itms">
+      <Rnm id="698" nNm="sanId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statUserGrow" SupCls="Schema" SupNme="itms">
+      <Rnm id="699" nNm="sugId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appProMid" SupCls="Schema" SupNme="itms">
+      <Rnm id="701" nNm="aprmId" oNm="apmId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statTss" SupCls="Schema" SupNme="itms">
+      <Rnm id="702" nNm="stId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="itms">
+      <Rnm id="703" nNm="ageFlow" oNm="ageflow"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="agency" SupCls="Schema" SupNme="itms">
+      <Rnm id="704" nNm="ageEmail" oNm="ageemail"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchantLockApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="708" nNm="mclId" oNm="mlaId"/>
+      <Rnm id="705" nNm="mlaId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchantLockApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="706" nNm="apvLogicVer" oNm="lockApv"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="merchantLockApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="709" nNm="mclState" oNm="mlaState"/>
+      <Rnm id="707" nNm="mlaState" oNm="lockStraTegy"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="710" nNm="merchantLockApp" oNm="merChantLockApp"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="711" nNm="oneClearingTempTmp" oNm="one"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="oneClearingTempTmp" SupCls="Schema" SupNme="itms">
+      <Rnm id="712" nNm="octId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAudit" SupCls="Schema" SupNme="itms">
+      <Rnm id="713" nNm="saId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="preApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="714" nNm="paId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="preApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="715" nNm="paNote" oNm="appNote"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="preApp" SupCls="Schema" SupNme="itms">
+      <Rnm id="717" nNm="appNO" oNm="appNo"/>
+      <Rnm id="716" nNm="appNo" oNm="appId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppDetail" SupCls="Schema" SupNme="itms">
+      <Rnm id="719" nNm="satId" oNm="sadId"/>
+      <Rnm id="718" nNm="sadId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="feeProConfig" SupCls="Schema" SupNme="itms">
+      <Rnm id="720" nNm="fpcId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posFeeConfig" SupCls="Schema" SupNme="itms">
+      <Rnm id="721" nNm="pfcId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posFeeOrder" SupCls="Schema" SupNme="itms">
+      <Rnm id="722" nNm="pfoId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posFeeOrderDetail" SupCls="Schema" SupNme="itms">
+      <Rnm id="723" nNm="pfodId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="posPush" SupCls="Schema" SupNme="itms">
+      <Rnm id="724" nNm="pphId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appTestPos" SupCls="Schema" SupNme="itms">
+      <Rnm id="725" nNm="atpId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appTestLab" SupCls="Schema" SupNme="itms">
+      <Rnm id="726" nNm="atlId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="statAppMer" SupCls="Schema" SupNme="itms">
+      <Rnm id="727" nNm="samId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appVersion" SupCls="Schema" SupNme="itms">
+      <Rnm id="728" nNm="apvApkName" oNm="apvApkname"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="729" nNm="userSession" oNm="ss"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="userSession" SupCls="Schema" SupNme="itms">
+      <Rnm id="730" nNm="usId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="appOrder" SupCls="Schema" SupNme="itms">
+      <Rnm id="732" nNm="ordFormerId" oNm="oldOrdId"/>
+      <Rnm id="731" nNm="oldOrdId" oNm="orlOrdId"/>
+    </RnmCh>
+    <RnmCh ObjCls="Schema" ParCls="Database" ParNme="itms" SupCls="" SupNme="">
+      <Rnm id="733" nNm="dev" oNm="itms"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_user" SupCls="Schema" SupNme="dev">
+      <Rnm id="734" nNm="usId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_express" SupCls="Schema" SupNme="dev">
+      <Rnm id="735" nNm="expId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_gift" SupCls="Schema" SupNme="dev">
+      <Rnm id="737" nNm="gfId" oNm="gtId"/>
+      <Rnm id="736" nNm="gtId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_giftExch" SupCls="Schema" SupNme="dev">
+      <Rnm id="738" nNm="geId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_giftExch" SupCls="Schema" SupNme="dev">
+      <Rnm id="739" nNm="geDeliveryDate" oNm="geDelivery"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_giftExch" SupCls="Schema" SupNme="dev">
+      <Rnm id="740" nNm="geArrivalDate" oNm="geArrival"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_recharge" SupCls="Schema" SupNme="dev">
+      <Rnm id="741" nNm="reId" oNm="Id"/>
+    </RnmCh>
+  </RnmMgr>
+  <DbDocOptionMgr>
+    <BasicOptionMgr>
+      <Name>db.doc.option.mgr</Name>
+      <BoolOpt lbl="Diagrams" nm="doc.diagrams" on="1" spl="0"/>
+      <BoolOpt lbl="Foreign Keys" nm="doc.fks" on="1" spl="0"/>
+      <BoolOpt lbl="Indexes" nm="doc.indexes" on="1" spl="0"/>
+      <BoolOpt lbl="Overwrite CSS File" nm="doc.overwrite.css" on="1" spl="0"/>
+      <BoolOpt lbl="Procedures" nm="doc.procs" on="1" spl="0"/>
+      <BoolOpt lbl="Schemas" nm="doc.schemas" on="1" spl="0"/>
+      <BoolOpt lbl="Sequences" nm="doc.sequences" on="1" spl="0"/>
+      <BoolOpt lbl="Tables" nm="doc.tables" on="1" spl="0"/>
+      <BoolOpt lbl="Triggers" nm="doc.triggers" on="1" spl="0"/>
+      <BoolOpt lbl="Views" nm="doc.views" on="1" spl="0"/>
+    </BasicOptionMgr>
+  </DbDocOptionMgr>
+  <OpenEditors>
+    <OpenEditor ClsNm="Diagram" fqn="null.devDiagrams" selected="1"/>
+  </OpenEditors>
+  <TreePaths>
+    <TreePath/>
+    <TreePath>/Schemas (2)</TreePath>
+    <TreePath>/Schemas (2)/dev</TreePath>
+    <TreePath>/Schemas (2)/dev/Tables (6)</TreePath>
+  </TreePaths>
+  <SqlTexts/>
+</Db>
