@@ -4,6 +4,60 @@
   <DefTblOpts/>
   <DocFolder>/Users/wxl/Desktop/桌面/itmsMpDb_WEB</DocFolder>
   <Sch Cm="" nm="dev">
+    <Tbl UsSo="1" nm="tb_box">
+      <Cm>礼品宝箱</Cm>
+      <TblOpts/>
+      <Pk ClNs="boId" nm="pktb_box"/>
+      <Cl au="0" df="" nm="boId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usId" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>用户id</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="gfId" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>礼物ID</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="boDate" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>添加日期(YY/MM/DD hh:mm:ss)</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tb_config">
+      <Cm>系统配置表</Cm>
+      <TblOpts/>
+      <Pk ClNs="cfId" nm="pktb_config"/>
+      <Cl au="0" df="" nm="cfId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键Id</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="cfNO" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>配置编号(编号见“库表JSON说明”)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="cfTitle" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
+        <Cm>配置标题</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="cfInfo" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="500" sc="null" sg="1" un="0"/>
+        <Cm>配置说明</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="cfValue" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="3000" sc="null" sg="1" un="0"/>
+        <Cm>配置值JSON(JSON格式见“库表JSON说明”)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="cfDate" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>更新日期(YY/MM/DD hh:mm:ss)</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
     <Tbl UsSo="1" nm="tb_express">
       <Cm>邮寄信息表</Cm>
       <TblOpts/>
@@ -67,6 +121,10 @@
         <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
         <Cm>礼品描述</Cm>
       </Cl>
+      <Cl au="0" df="" nm="gfWantPer" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>多少人想要</Cm>
+      </Cl>
       <Cl au="0" df="" nm="gfStock" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
         <Cm>库存量</Cm>
@@ -77,19 +135,19 @@
       </Cl>
       <Cl au="0" df="" nm="gfGold" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>礼品所需金币(得分)</Cm>
+        <Cm>礼品所需得分</Cm>
       </Cl>
       <Cl au="0" df="" nm="gfSoft" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
         <Cm>礼物排序(1-999 正向排序 小到大)</Cm>
       </Cl>
       <Cl au="0" df="" nm="gfDate" nu="1">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
-        <Cm>更新时间</Cm>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>更新时间(YY/MM/DD hh:mm:ss)</Cm>
       </Cl>
       <Cl au="0" df="" nm="gfTem" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>是否启用(0未启用 1启用 2废弃)</Cm>
+        <Cm>启用状态(0未启用 1启用 2废弃 3不可兑换 4下架)</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -102,6 +160,10 @@
         <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
         <Cm>主键</Cm>
       </Cl>
+      <Cl au="0" df="" nm="geGroup" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>购买组Id(打包购买时产生)</Cm>
+      </Cl>
       <Cl au="0" df="" nm="usId" nu="1">
         <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
         <Cm>用户ID</Cm>
@@ -113,6 +175,10 @@
       <Cl au="0" df="" nm="geNum" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
         <Cm>兑换数量</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geGold" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>购买时花费分数</Cm>
       </Cl>
       <Cl au="0" df="" nm="geName" nu="1">
         <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
@@ -138,31 +204,33 @@
         <DT arr="0" ds="VarChar" en="" id="12" ln="500" sc="null" sg="1" un="0"/>
         <Cm>兑换收件详细地址</Cm>
       </Cl>
-      <Cl au="0" df="" nm="geDate" nu="1">
+      <Cl au="0" df="" nm="geExpName" nu="1">
         <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
-        <Cm>兑换时间</Cm>
-      </Cl>
-      <Cl au="0" df="" nm="geDeliveryDate" nu="1">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
-        <Cm>发货时间</Cm>
-      </Cl>
-      <Cl au="0" df="" nm="geArrivalDate" nu="1">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
-        <Cm>到货时间</Cm>
+        <Cm>快递公司名称</Cm>
       </Cl>
       <Cl au="0" df="" nm="geExpNO" nu="1">
         <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
         <Cm>快递单号</Cm>
       </Cl>
-      <UniqueConstraints/>
-      <SchTrHis/>
-    </Tbl>
-    <Tbl UsSo="1" nm="tb_ranking">
-      <Cm>用户排名信息</Cm>
-      <TblOpts/>
-      <Pk ClNs="Id" nm="pktb_ranking"/>
-      <Cl au="0" df="" nm="Id" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+      <Cl au="0" df="" nm="geExpTel" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>快递员电话</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geExpMoney" nu="1">
+        <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>支付的邮费</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geDate" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>兑换时间(YY/MM/DD hh:mm:ss)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geDeliveryDate" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>发货时间(YY/MM/DD hh:mm:ss)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geArrivalDate" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>到货时间(YY/MM/DD hh:mm:ss)</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -188,8 +256,8 @@
         <Cm>用户充值币(获得喷雾剂数)</Cm>
       </Cl>
       <Cl au="0" df="" nm="reDate" nu="1">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
-        <Cm>充值时间</Cm>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>充值时间(YY/MM/DD hh:mm:ss)</Cm>
       </Cl>
       <UniqueConstraints/>
       <SchTrHis/>
@@ -214,20 +282,40 @@
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
         <Cm>用户充值币(喷雾剂)</Cm>
       </Cl>
+      <Cl au="0" df="" nm="usLastGold" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>最后单局得分</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usGold" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>累计用户得分</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usMaxGold" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>累计用户得分(得分最高记录)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usMaxGoldDate" nu="1">
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>累计最高得分日期(YY/MM/DD hh:mm:ss)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usLuck" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>幸运值</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usConvertList" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>兑换记录提醒(null 无提醒 1提醒)</Cm>
+      </Cl>
       <Cl au="0" df="" nm="usSetVoice" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
         <Cm>声音配置(null开启,1关闭)</Cm>
       </Cl>
-      <Cl au="0" df="" nm="usGold" nu="1">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>用户金币(得分)</Cm>
-      </Cl>
       <Cl au="0" df="" nm="usSynDate" nu="1">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
-        <Cm>得分同步时间(YY/MM/DD hh:mm:ss)</Cm>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>初次登录时间(YY/MM/DD hh:mm:ss)</Cm>
       </Cl>
       <Cl au="0" df="" nm="usDate" nu="1">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
         <Cm>最后访问时间(YY/MM/DD hh:mm:ss)</Cm>
       </Cl>
       <UniqueConstraints/>
@@ -260,11 +348,13 @@
       <DbTableRectangleFill>HeaderFooterFill</DbTableRectangleFill>
       <svg path="/Users/wxl/Desktop/itmsDb.svg"/>
     </DiaProps>
-    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_user" x="30" y="42"/>
-    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_gift" x="30" y="428"/>
-    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_express" x="29" y="231"/>
-    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_giftExch" x="519" y="259"/>
-    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_recharge" x="521" y="41"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_user" x="32" y="193"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_gift" x="36" y="445"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_express" x="590" y="61"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_giftExch" x="594" y="408"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_recharge" x="600" y="256"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_config" x="34" y="32"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_box" x="40" y="666"/>
     <Notes/>
     <Zones/>
   </Dgm>
@@ -293,7 +383,7 @@
     <Notes/>
     <Zones/>
   </Dgm>
-  <RnmMgr NxRnmId="742">
+  <RnmMgr NxRnmId="747">
     <RnmCh ObjCls="Schema" ParCls="Database" ParNme="newDb" SupCls="" SupNme="">
       <Rnm id="408" nNm="itms" oNm="dev"/>
       <Rnm id="1" nNm="dev" oNm="schemaA"/>
@@ -2293,6 +2383,21 @@
     <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_recharge" SupCls="Schema" SupNme="dev">
       <Rnm id="741" nNm="reId" oNm="Id"/>
     </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_box" SupCls="Schema" SupNme="dev">
+      <Rnm id="742" nNm="boId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_config" SupCls="Schema" SupNme="dev">
+      <Rnm id="743" nNm="cfId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="744" nNm="tb_box" oNm="tb_Box"/>
+    </RnmCh>
+    <RnmCh ObjCls="Table" ParCls="Schema" ParNme="dev" SupCls="" SupNme="">
+      <Rnm id="745" nNm="tb_config" oNm="系统配置表"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_user" SupCls="Schema" SupNme="dev">
+      <Rnm id="746" nNm="usConvertList" oNm="tb_convertList"/>
+    </RnmCh>
   </RnmMgr>
   <DbDocOptionMgr>
     <BasicOptionMgr>
@@ -2316,7 +2421,7 @@
     <TreePath/>
     <TreePath>/Schemas (2)</TreePath>
     <TreePath>/Schemas (2)/dev</TreePath>
-    <TreePath>/Schemas (2)/dev/Tables (6)</TreePath>
+    <TreePath>/Schemas (2)/dev/Tables (7)</TreePath>
   </TreePaths>
   <SqlTexts/>
 </Db>
