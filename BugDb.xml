@@ -27,6 +27,88 @@
       <UniqueConstraints/>
       <SchTrHis/>
     </Tbl>
+    <Tbl UsSo="1" nm="tb_bugConfig">
+      <Cm>小强设置表</Cm>
+      <TblOpts/>
+      <Pk ClNs="bgId" nm="pktb_bugConfig"/>
+      <Cl au="0" df="" nm="bgId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgName" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>小强名称</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgClass" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>小强分类(1普通 2签到)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgGold" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>得分</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgCoin" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>花费充值币</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgLuck" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>幸运依赖</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgDoAve" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>点击均值</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgDoMin" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>点击底值</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgSetPro" nu="1">
+        <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>设置概率(%百分比值)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgActPro" nu="1">
+        <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>实际概率(%百分比值)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgSort" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>小强排序(1-999 正向排序 小到大)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgStatus" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>是否启用(0未启用 1启用)</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
+    <Tbl UsSo="1" nm="tb_bugPic">
+      <Cm>小强图片</Cm>
+      <TblOpts/>
+      <Pk ClNs="bpId" nm="pktb_bugPic"/>
+      <Cl au="0" df="" nm="bpId" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>主键</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bgId" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <Cm>小强设置主键</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bpClass" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>图片分类(1走动图 2个性图 3逃跑图 4中毒图 5恢复图 6死亡图)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bpPicPath" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
+        <Cm>图片路径</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="bpSort" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>小强排序(1-999 正向排序 小到大)</Cm>
+      </Cl>
+      <UniqueConstraints/>
+      <SchTrHis/>
+    </Tbl>
     <Tbl UsSo="1" nm="tb_config">
       <Cm>系统配置表</Cm>
       <TblOpts/>
@@ -137,6 +219,10 @@
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
         <Cm>礼品所需得分</Cm>
       </Cl>
+      <Cl au="0" df="" nm="gfMoney" nu="1">
+        <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>累计礼物花费</Cm>
+      </Cl>
       <Cl au="0" df="" nm="gfSoft" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
         <Cm>礼物排序(1-999 正向排序 小到大)</Cm>
@@ -218,7 +304,23 @@
       </Cl>
       <Cl au="0" df="" nm="geExpMoney" nu="1">
         <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>支付的邮费</Cm>
+        <Cm>用户支付的邮费</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geSigStatus" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>单品兑换状态(0未处理 1已备货 2邀邮 3已邮)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geGroStatus" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>全品兑换状态(0未处理 1备货中 2已备货 3邀约 4已邮)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geExpUserMoney" nu="1">
+        <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>实际邮寄费用</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="geRemark" nu="1">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="500" sc="null" sg="1" un="0"/>
+        <Cm>备注说明</Cm>
       </Cl>
       <Cl au="0" df="" nm="geDate" nu="1">
         <DT arr="0" ds="DateTime" en="" id="700" ln="null" sc="null" sg="1" un="0"/>
@@ -280,7 +382,15 @@
       </Cl>
       <Cl au="0" df="" nm="usCoin" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
-        <Cm>用户充值币(喷雾剂)</Cm>
+        <Cm>剩余充值币(喷雾剂)</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usGraCoin" nu="1">
+        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>用户累计充值币</Cm>
+      </Cl>
+      <Cl au="0" df="" nm="usGraMoney" nu="1">
+        <DT arr="0" ds="Float" en="" id="6" ln="null" sc="null" sg="1" un="0"/>
+        <Cm>用户累计总花费</Cm>
       </Cl>
       <Cl au="0" df="" nm="usLastGold" nu="1">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
@@ -349,12 +459,14 @@
       <svg path="/Users/wxl/Desktop/itmsDb.svg"/>
     </DiaProps>
     <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_user" x="32" y="193"/>
-    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_gift" x="36" y="445"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_gift" x="33" y="447"/>
     <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_express" x="590" y="61"/>
     <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_giftExch" x="594" y="408"/>
     <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_recharge" x="600" y="256"/>
     <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_config" x="34" y="32"/>
     <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_box" x="40" y="666"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_bugConfig" x="41" y="779"/>
+    <TbGl bkCl="ff6666ff" sch="dev" tbl="tb_bugPic" x="521" y="776"/>
     <Notes/>
     <Zones/>
   </Dgm>
@@ -383,7 +495,7 @@
     <Notes/>
     <Zones/>
   </Dgm>
-  <RnmMgr NxRnmId="747">
+  <RnmMgr NxRnmId="750">
     <RnmCh ObjCls="Schema" ParCls="Database" ParNme="newDb" SupCls="" SupNme="">
       <Rnm id="408" nNm="itms" oNm="dev"/>
       <Rnm id="1" nNm="dev" oNm="schemaA"/>
@@ -2398,6 +2510,15 @@
     <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_user" SupCls="Schema" SupNme="dev">
       <Rnm id="746" nNm="usConvertList" oNm="tb_convertList"/>
     </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_gift" SupCls="Schema" SupNme="dev">
+      <Rnm id="747" nNm="gfMoney" oNm="fgMoney"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_bugConfig" SupCls="Schema" SupNme="dev">
+      <Rnm id="748" nNm="bgId" oNm="Id"/>
+    </RnmCh>
+    <RnmCh ObjCls="Column" ParCls="Table" ParNme="tb_bugPic" SupCls="Schema" SupNme="dev">
+      <Rnm id="749" nNm="bpId" oNm="Id"/>
+    </RnmCh>
   </RnmMgr>
   <DbDocOptionMgr>
     <BasicOptionMgr>
@@ -2421,7 +2542,7 @@
     <TreePath/>
     <TreePath>/Schemas (2)</TreePath>
     <TreePath>/Schemas (2)/dev</TreePath>
-    <TreePath>/Schemas (2)/dev/Tables (7)</TreePath>
+    <TreePath>/Schemas (2)/dev/Tables (9)</TreePath>
   </TreePaths>
   <SqlTexts/>
 </Db>
